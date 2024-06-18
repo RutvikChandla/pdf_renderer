@@ -12,3 +12,14 @@ if ActiveSupport::TestCase.respond_to?(:fixture_paths=)
   ActiveSupport::TestCase.file_fixture_path = File.expand_path("fixtures", __dir__) + "/files"
   ActiveSupport::TestCase.fixtures :all
 end
+
+
+class ActiveSupport::TestCase
+  # Run tests in parallel with specified workers
+  parallelize(workers: :number_of_processors)
+
+  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
+  fixtures :all
+
+  # Add more helper methods to be used by all tests here...
+end

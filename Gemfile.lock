@@ -4,6 +4,7 @@ PATH
     pdf_renderer (0.1.0)
       prawn (~> 2.4.0)
       rails (>= 7.1.3.2)
+      sqlite3 (~> 1.6.2)
 
 GEM
   remote: https://rubygems.org/
@@ -108,6 +109,7 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.4)
+    matrix (0.4.2)
     mini_mime (1.1.5)
     minitest (5.23.1)
     mutex_m (0.2.0)
@@ -184,16 +186,12 @@ GEM
       psych (>= 4.0.0)
     reline (0.5.9)
       io-console (~> 0.5)
-    sqlite3 (2.0.2-aarch64-linux-gnu)
-    sqlite3 (2.0.2-aarch64-linux-musl)
-    sqlite3 (2.0.2-arm-linux-gnu)
-    sqlite3 (2.0.2-arm-linux-musl)
-    sqlite3 (2.0.2-arm64-darwin)
-    sqlite3 (2.0.2-x86-linux-gnu)
-    sqlite3 (2.0.2-x86-linux-musl)
-    sqlite3 (2.0.2-x86_64-darwin)
-    sqlite3 (2.0.2-x86_64-linux-gnu)
-    sqlite3 (2.0.2-x86_64-linux-musl)
+    sqlite3 (1.6.9-aarch64-linux)
+    sqlite3 (1.6.9-arm-linux)
+    sqlite3 (1.6.9-arm64-darwin)
+    sqlite3 (1.6.9-x86-linux)
+    sqlite3 (1.6.9-x86_64-darwin)
+    sqlite3 (1.6.9-x86_64-linux)
     stringio (3.1.1)
     thor (1.3.1)
     timeout (0.4.1)
@@ -224,7 +222,9 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  matrix (~> 0.4.2)
   pdf_renderer!
+  prawn (~> 2.4)
   puma
   sqlite3
 
